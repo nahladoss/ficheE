@@ -2,7 +2,7 @@ import mine from './assets/mine.jpeg' // adapte l'extension (.jpg, .jpeg…) si 
 import './App.css'
 
 const student = {
-  nom: "Nahla Doss",
+  nom: "Doss Nahla",
   email: "dossnahla@gmail.com",
   telephone: "+216 50 270 212",
   filiere: "Génie Logiciel et Systèmes d'Information",
@@ -25,14 +25,11 @@ function App() {
       <p><strong>Groupe :</strong> {student.groupe}</p>
       <p><strong>Ville :</strong> {student.ville}</p>
 
-      <a
-        href={`https://mail.google.com/mail/?view=cm&to=${student.email}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn"
-      >
-        Contacter
-      </a>
+      <button type="button" className="btn" onClick={() =>window.open(`https://mail.google.com/mail/?view=cm&to=${student.email}`,'_blank')
+  }
+>
+  Contacter
+</button>
     </div>
   )
 }
